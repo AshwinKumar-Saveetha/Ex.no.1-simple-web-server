@@ -94,24 +94,24 @@ simple-web-server/
     </build>
 </project>
 ```
-### DemoApplication.java
+### Exp1Application.java
 ```java
-package com.example.demo;
+package com.example.Exp1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class Exp1Application {
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(Exp1Application.class, args);
     }
 }
 
 ```
 ### HelloController.java
 ```java
-package com.example.demo;
+package com.example.Exp1;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -121,7 +121,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hello, Spring Boot!";
+        return "Hello, Spring Boot! by Ashwin";
     }
 }
 
@@ -133,7 +133,8 @@ public class HelloController {
 
 ### Output:
 
-<img width="1406" height="223" alt="image" src="https://github.com/user-attachments/assets/fdacf822-e3a9-452c-a4c1-c891593f60dc" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/60c70a5b-8163-4c33-afe3-daee02904966" />
+
 
 ### Result:
 The Spring Boot application was successfully developed and executed, handling HTTP requests through RESTful endpoints.
