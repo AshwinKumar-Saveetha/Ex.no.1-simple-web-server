@@ -1,7 +1,8 @@
-
 ## Ex 01 -Simple Web Server using Spring Boot
+
 ## NAME: Ashwin Kumar A
 ## REG NO: 212223040021
+
 ## AIM:
 To develop a Simple Web Server using Spring Boot that can handle basic HTTP requests and return appropriate responses through RESTful endpoints.
 ## ALGORITHM:
@@ -32,7 +33,7 @@ Run the application using your IDE or via the command line (mvn spring-boot:run 
 Test the Endpoint:
 
 Open a web browser or use Postman to visit:
-http://localhost:8080/hello
+http://localhost:4000/hello
 
 You should see the output (e.g., "Hello World").
 
@@ -55,17 +56,17 @@ simple-web-server/
 ├── pom.xml
 ```
  ### Pom.xml
-```xml
+``` xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>simple-web-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
+    <name>Simple Web Server</name>
     <description>Demo project for Spring Boot Web Server</description>
 
     <parent>
@@ -96,6 +97,7 @@ simple-web-server/
 ### DemoApplication.java
 ```java
 package com.example.demo;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -105,18 +107,16 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 }
-```
 
+```
 ### HelloController.java
 ```java
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
 public class HelloController {
 
     @GetMapping("/hello")
@@ -124,20 +124,17 @@ public class HelloController {
         return "Hello, Spring Boot!";
     }
 }
-```
 
+```
 ### application.properties:
 ```
- server.port=8080
+ server.port=4000
 ```
 
 ### Output:
-<img width="1567" height="473" alt="image" src="https://github.com/user-attachments/assets/ecd24251-053b-45e2-8214-3264620170c5" />
+
+<img width="1406" height="223" alt="image" src="https://github.com/user-attachments/assets/fdacf822-e3a9-452c-a4c1-c891593f60dc" />
 
 ### Result:
-Thus, the Simple Web Server was successfully developed using Spring Boot. The application was able to handle basic HTTP requests through RESTful endpoints and return appropriate responses for the requested URLs.
-
-
-
-
-
+The Spring Boot application was successfully developed and executed, handling HTTP requests through RESTful endpoints.
+The /hello endpoint returned the expected response “Hello, Spring Boot!” on port 4000.
